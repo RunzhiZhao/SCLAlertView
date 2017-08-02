@@ -83,7 +83,11 @@
     aPath.lineWidth = lineWidth;
     [aPath stroke];
     
-    _countLabel.text = [NSString stringWithFormat:@"%d", (int)currentTime];
+    if (_reverse) {
+        _countLabel.text = [NSString stringWithFormat:@"%d",(int)ceilf(currentTime)];
+    } else {
+        _countLabel.text = [NSString stringWithFormat:@"%d", (int)currentTime];
+    }
 }
 
 - (void)startTimerWithTimeLimit:(int)tl completed:(SCLActionBlock)completed

@@ -154,7 +154,7 @@ SCLTimerDisplay *buttonTimer;
 {
     // Default values
     kCircleBackgroundTopPosition = -15.0f;
-    kCircleHeight = 56.0f;
+    kCircleHeight = 62.0f;
     kCircleHeightBackground = 62.0f;
     kActivityIndicatorHeight = 40.0f;
     kTitleTop = 30.0f;
@@ -209,7 +209,7 @@ SCLTimerDisplay *buttonTimer;
     
     // Circle Image View
     _circleIconImageView.frame = CGRectMake(x, x, _circleIconHeight, _circleIconHeight);
-    _circleIconImageView.contentMode = UIViewContentModeScaleAspectFill;
+    _circleIconImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     [_circleViewBackground addSubview:_circleView];
     [_circleView addSubview:_circleIconImageView];
